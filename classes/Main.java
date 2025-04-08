@@ -3,8 +3,9 @@ import java.util.Scanner;
 
 public class Main {
     public static Figure getFigure(Scanner in) {
-        Figure result;
-        while (true) {
+        Figure result = new Square(0, 0, 0);
+        Boolean exit = false;
+        while (!exit) {
 
             System.out.print("Enter type of figure:\n"
                            + "1 - square\n"
@@ -23,12 +24,14 @@ public class Main {
                         result =(new Square(x, y, side_size));
                     else 
                         result = new Triangle(x, y, side_size);
+                    exit = true;
                     break;
                 }
                 case 2: {
                     System.out.print("Enter radius: ");
                     double radius = in.nextDouble();
                     result = (new Square(x, y, radius));
+                    exit = true;
                     break;
                 }
                 default: {
