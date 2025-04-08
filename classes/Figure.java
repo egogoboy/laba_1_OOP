@@ -23,6 +23,10 @@ abstract class Figure implements Distance {
         this.y = y;
     }
 
+    public Pair<Double, Double> getCoordinates() {
+        return new Pair(this.x, this.y);
+    }
+
     @Override
     public double distanceToOrigin() {
         return Math.sqrt(x * x + y * y);

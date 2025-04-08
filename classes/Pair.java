@@ -1,4 +1,4 @@
-public class Pair <T, K>{
+public class Pair <T, K> {
     private T first;
     private K second;
     public Pair() { first = null; second = null; }
