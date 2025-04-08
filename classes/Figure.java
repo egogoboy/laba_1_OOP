@@ -32,5 +32,13 @@ abstract class Figure implements Distance {
         return Math.sqrt(x * x + y * y);
     }
 
+    public static <T extends Figure, K extends Figure> double getDistanceFromTo(T from, K to) {
+        Pair<Double, Double> from_coordinates = from.getCoordinates();
+        Pair<Double, Double> to_coordinates = to.getCoordinates();
+
+        return Math.sqrt(Math.pow(to_coordinates.getFirst() - from_coordinates.getFirst(), 2) 
+                       + Math.pow(to_coordinates.getSecond() - from_coordinates.getSecond(), 2));
+    }
+
     abstract public double countSquare(); 
 }
