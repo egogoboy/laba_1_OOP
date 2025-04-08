@@ -40,5 +40,6 @@ abstract class Figure implements Distance {
                        + Math.pow(to_coordinates.getSecond() - from_coordinates.getSecond(), 2));
     }
 
-    abstract public double countSquare(); 
+    abstract public double countSquare();
+
 }
